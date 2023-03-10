@@ -1,0 +1,98 @@
+<dictionnaire de données>
+film (entité)
+- id (AI)
+- titre (string)
+- date de sortie (date)
+- affiche (string = nom du fichier image)
+
+individu (entité)
+- id (AI)
+- nom (string)
+- prenom (string)
+
+cinema (entité)
+- id (AI)
+- nom (string)
+- ville (string)
+
+participer (association)
+- un individu participe à une film avec certaine(s) fonction(s) (acteur et/ou réalisateur)
+- fonction d'un individu dans un film (string)
+
+projeter (association)
+- un film est projeté dans un cinéma entre une date de début et une date de fin
+- date de debut (date)
+- date de fin (date)
+
+</dictionnaire de données>
+
+<MCD>
+    <entités>
+
+    film (entité)
+    - id (AI)
+    - titre (string)
+    - date de sortie (date)
+    - affiche (string = nom du fichier image)
+
+    individu (entité)
+    - id (AI)
+    - nom (string)
+    - prenom (string)
+
+    cinema (entité)
+    - id (AI)
+    - nom (string)
+    - ville (string)    
+    
+    </entités>
+
+    <associations>
+    participer (fonction)
+    - individu 1,N
+    - film 0,N
+
+    projeter (date_debut, date_fin)
+    - film 0,N
+    - cinema 0,N
+    </associations>
+</MCD>
+
+<MCD graphique>
+    participer : individu 1,N ; film 0,N
+    projeter : film 0,N ; cinema 0,N
+</MCD graphique>
+
+<MLD>
+    film :
+    - id (PK)
+    - titre (string)
+    - date de sortie (date)
+    - affiche (string = nom du fichier image)
+
+    individu :
+    - id (PK)
+    - nom (string)
+    - prenom (string)
+
+    cinema :
+    - id (PK)
+    - nom (string)
+    - ville (string)    
+    
+    participer 
+    - id (PK)
+    - fonction (string)
+    - individu (FK)
+    - film (FK)
+
+    projeter 
+    - id (PK)
+    - date_debut (date)
+    - date_fin (date)
+    - film (FK)
+    - cinema (FK)
+
+</MLD>
+
+

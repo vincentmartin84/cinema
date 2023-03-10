@@ -1,0 +1,14 @@
+On souhaite développer un site de cinéma qui doit permettre à un utilisateur de :
+- rechercher un film,
+- afficher le titre du film, sa date de sortie, son affiche,
+- donner le ou les réalisateurs du film,
+- donner le casting du film (la liste des acteurs),
+- afficher la liste des cinémas qui projètent ce film actuellement.
+
+L'utilisateur doit aussi pouvoir :
+- rechercher une salle de cinéma par ville,
+- afficher la liste des films actuellement projetés dans ce cinéma,
+- rechercher un acteur et afficher la liste de ses films.
+- rechercher un réalisateur et afficher la liste de ses films.
+
+A noter qu'un acteur peut être aussi réalisateur.
